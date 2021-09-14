@@ -1,0 +1,27 @@
+<div class="sticky-top mt-3 mb-3">
+    <div class="info">
+        <div style="width: 100%; " class="align-items-top d-flex justify-content-center">
+            <ul>
+                <li>
+                    <div class="mt-5 mb-3"
+                        style="width: 13vh; height: 13vh; border-radius: 50%; background-image: url(../../../assets/images/little-head.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;">
+                    </div>
+                </li>
+                <li class="mb-2"><a [routerLink]="['/About-Me']" routerLinkActive="router-link-active"><fa-icon [icon]="['far', 'id-badge']"></fa-icon> About Me</a>
+                </li>
+                <li class="mb-2"><a [routerLink]="['/Classes']" routerLinkActive="router-link-active"> Classes </a></li>
+                <li class="mb-2"><a [routerLink]="['/Create-Post']" routerLinkActive="router-link-active"> Series </a></li>
+                <li class="mb-2"><a [routerLink]="['/Post-List']" routerLinkActive="router-link-active"> Posts </a></li>
+                <li class="mb-2"><a [routerLink]="['/Post-List']" routerLinkActive="router-link-active"> InActivePosts </a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="mt-3 info2  d-flex justify-content-center sticky-top" style="vertical-align: middle;">
+        <ul class="mt-2 mb-2"> 
+            <li class="mb-2"><a [routerLink]="['/Create-Post']" routerLinkActive="router-link-active"> Create Post </a></li>
+            <li class="mb-2"><a [routerLink]="['/Create-Class']" routerLinkActive="router-link-active"> Create Class </a></li>
+            <li><a [routerLink]="['/Create-Series']" routerLinkActive="router-link-active"> Create Series</a></li>
+        </ul>
+    </div>
+</div>

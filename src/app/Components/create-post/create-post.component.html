@@ -1,0 +1,20 @@
+<div class="col-md-10 offset-md-1 mt-3">
+    <h3>Create Post</h3>
+    <form (ngSubmit) = "onSubmit($event)">
+        <div class="form-group mb-2">
+            <label for="postname">Post Name</label>
+            <input type="text" class="form-control" id="postname" name="postname" [(ngModel)]="post.postName" required>
+        </div>
+        <div class="form-group mb-2">
+            <label for="category">Category</label>
+            <input type="text" class="form-control" id="category" name="category" [(ngModel)]="post.category" required>
+        </div>
+        <div class="form-group mb-2">
+            <label for="series">Series</label>
+            <input type="text" class="form-control" id="series" name="series" [(ngModel)]="post.seriesName" required>
+        </div>
+        <div class="form-group d-flex justify-content-center mb-2" style="width: 100%;">
+            <button class="btn btn-dark" type="submit">submit!</button>
+        </div>
+    </form>
+</div>

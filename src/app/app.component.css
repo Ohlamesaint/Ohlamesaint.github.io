@@ -1,0 +1,15 @@
+a{
+    color: black;
+}
+
+
+
+.footer{
+    height: 6vh;
+    width: 65.5vw;
+    background-color: rgb(29, 24, 24);
+    text-align: center;
+    line-height: 6vh;
+    color: white;
+}
+
