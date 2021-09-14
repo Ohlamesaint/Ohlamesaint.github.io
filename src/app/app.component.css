@@ -5,8 +5,6 @@ a{
 
 
 .footer{
-
-    
     height: 6vh;
     width: 65.5vw;
     background-color: rgb(29, 24, 24);
@@ -14,3 +12,4 @@ a{
     line-height: 6vh;
     color: white;
 }
+

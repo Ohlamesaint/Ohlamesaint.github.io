@@ -118,7 +118,7 @@ export class EditorConfig {
 
   // public editorFunction = ''; //定义调用的方法
   public width = '100%';
-  public height = '';
+  public height = '80vh';
   //toc           : false,         // diable ToC
   public tocStartLevel = 2; // Parse beginning of H2, Default value 1
   constructor() {}

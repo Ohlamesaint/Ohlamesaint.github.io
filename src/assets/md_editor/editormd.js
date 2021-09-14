@@ -93,7 +93,7 @@
         name                 : "",             // Form element name
         value                : "",             // value for CodeMirror, if mode not gfm/markdown
         theme                : "",             // Editor.md self themes, before v1.5.0 is CodeMirror theme, default empty
-        editorTheme          : "default",      // Editor area, this is CodeMirror theme at v1.5.0
+        editorTheme          : "base16-dark",      // Editor area, this is CodeMirror theme at v1.5.0
         previewTheme         : "",             // Preview area theme, default empty
         markdown             : "",             // Markdown source code
         appendMarkdown       : "",             // if in init textarea value not empty, append markdown to textarea
@@ -481,7 +481,9 @@
             {
                 this.loadQueues();
             }
-
+            // if(view) {
+            //     this.previewing();
+            // }
             return this;
         },
         

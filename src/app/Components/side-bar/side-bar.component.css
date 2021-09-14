@@ -1,0 +1,26 @@
+.info{
+    height: max-content;
+    width: 100%;
+    background-color: rgba(9, 2, 17, 0.603);
+}
+
+.info2{
+    height: max-content;
+    width: 100%;
+    background-color: rgba(17, 4, 32, 0.603);
+}
+
+li{
+    list-style-type: none;
+    text-align: center;
+    color: white;
+}
+ul{
+    padding : 0;
+}
+
+a{
+    user-select: none;
+    text-decoration: none;
+    color: white;
+}

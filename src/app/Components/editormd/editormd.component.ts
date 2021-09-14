@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
+import { Router } from '@angular/router';
 import { EditorConfig } from '../../Directives/editor/model/editor-config';
+
 declare var $: any;
 declare var editormd: any;
 @Component({
@@ -7,31 +9,38 @@ declare var editormd: any;
   templateUrl: './editormd.component.html',
   styleUrls: ['./editormd.component.css'],
 })
-export class EditormdComponent implements OnInit {
-  constructor() {}
+export class EditormdComponent implements OnInit, OnChanges {
 
-  ngOnInit(): void {}
+  constructor( private router: Router, ) { }
+
   editor: any;
   conf = new EditorConfig();
-  public showInfo: string = ''; //编辑器内容
+  buffer: string = "";
+  @Input() markdown: string = ''; //编辑器内容
+  @Output() markdownChange = new EventEmitter<string>();
 
-  ngAfterViewInit(): void {
+  ngOnChanges(changes: SimpleChanges){
+    this.conf.markdown = changes.markdown.currentValue;
     this.createEditor();
   }
 
+  ngOnInit(): void {
+  }
+  
+  updateMarkdown(){
+    this.markdownChange.emit(this.buffer);
+  }
+
   createEditor() {
-    this.editor = editormd('markdown', this.conf); // 创建编辑器
-    // //解决右侧预览偶尔显示不出来的问题(编辑功能下的md)
-    $('#markdown.editormd-preview-container')[0].innerHTML = this.showInfo;
-    // 在没有开预览模式下获取编辑状态下的值
-    // let iputData = $('#markdown .editormd-markdown-textarea').val();
-    // 编辑器事件监听
+    this.editor = editormd('editormd', this.conf); 
+    $('#editormd .editormd-markdown-textarea')[0].innerHTML = this.conf.markdown;
+    this.buffer = this.conf.markdown;
     this.editor.on('change', () => {
       const textarea = $('#editText');
       const value = {
         textarea: textarea.val(),
       };
-      this.showInfo = value.textarea;
+      this.buffer = value.textarea;
     });
   }
 }

@@ -8,7 +8,7 @@ declare var $: any;
   selector: '[appEditorMd]'
 })
 export class EditorMdDirective implements AfterViewInit {
-  @Input() editormdConfig: EditorConfig; // 配置选项
+  @Input() editormdConfig: EditorConfig = new EditorConfig(); // 配置选项
   @Output() onEditorChange: EventEmitter<string> = new EventEmitter<string>(); // 发射器
   editor: any; // editormd编辑器
 
@@ -17,7 +17,6 @@ export class EditorMdDirective implements AfterViewInit {
 
   ngAfterViewInit(): void {
     this.editor = editormd(this.id, this.editormdConfig); // 创建编辑器
-
     const out = this.onEditorChange;
     const textarea = $('#' + this.id + ' :first'); // 获取textarea元素
 
