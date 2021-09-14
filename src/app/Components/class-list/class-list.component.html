@@ -1,0 +1,27 @@
+<div class="mt-3 col-md-12">
+    <form novalidate  #f="ngForm" class="mb-3">
+        <div class="form-group col-md-12">
+            <label class="form-label">Semester: </label>
+            <select class="form-control" (change)='onChange($event)' name="semester" id="" [(ngModel)]='targetSemester'  #semesterFormControl='ngModel' >
+                <option value="">Please select one semester ...</option>
+                <option [value]="ele" *ngFor="let ele of semester"> {{ele}} </option>
+            </select>
+        </div>
+    </form>
+
+    <div class="row row-col-3">
+        <div class="col" *ngFor="let class of classes">
+            <div class="card text-white bg-secondary">
+                <div class="card-body">
+                    <h5 class="card-title">{{class.name}}</h5>
+                    <p class="card-text">Teacher {{ class.teacher }}</p>
+                    <button style="width: 100%;" type="button" class="btn btn-info text-white" (click)='goToClass()'>Info</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- 使用盒子裡的香蕉來綁定targetSemester 利用semesterFormControl來綁定這個formControl -->
+</div>

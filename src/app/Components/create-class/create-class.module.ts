@@ -12,8 +12,8 @@ import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontaweso
 
 @NgModule({
     declarations: [CreateClassComponent],
-    imports: [EditormdModule, SwiperModule, FormsModule, CommonModule, FontAwesomeModule],
-    exports: [CreateClassComponent]
+    imports: [EditormdModule, SwiperModule, FontAwesomeModule, FormsModule, CommonModule],
+    exports: [CreateClassModule]
 })
 
 export class CreateClassModule {

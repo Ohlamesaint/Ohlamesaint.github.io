@@ -16,11 +16,12 @@ import { faCalendarPlus, faIdBadge } from '@fortawesome/free-regular-svg-icons';
 import { faGraduationCap, faSchool, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { SwiperModule } from 'swiper/angular';
 import { CreateClassModule } from './Components/create-class/create-class.module';
-
+import { ClassPageComponent } from './Components/class-page/class-page.component';
+import { ClassListComponent } from './Components/class-list/class-list.component';
 
 
 @NgModule({
-  declarations: [AppComponent,  AboutMeComponent, CreatePostComponent, SideBarComponent, PostListComponent, PostComponent],
+  declarations: [AppComponent,  AboutMeComponent, CreatePostComponent, SideBarComponent, PostListComponent, PostComponent, ClassListComponent, ClassPageComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -29,7 +30,8 @@ import { CreateClassModule } from './Components/create-class/create-class.module
     EditPostModule,
     FontAwesomeModule,
     SwiperModule,
-    CreateClassModule
+    CreateClassModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent],

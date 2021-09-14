@@ -10,12 +10,10 @@ export class Post implements PostInterface{
     active: Boolean = false;
     // Post 內容類別
     category: String = "";
+
     
     /////////////////////////////////////////////////
-    // Post 是否為隨堂筆記
-    isClass: Boolean = false;
-    // Post 是否為系列文章
-    isSeries: Boolean = false;           
+    type: String = "";
     // 若為隋堂筆記，則課程名稱
     className: String = "";
     // 若為系列文章，則系列名稱

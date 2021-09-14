@@ -26,53 +26,49 @@ export class CreateClassComponent implements OnInit, AfterViewInit {
   editorConfig = new EditorConfig();
   swiper: any;
   editor: any;
-  model: ClassPost  = new ClassPost();
+  model: ClassPost = new ClassPost();
   config = { simulateTouch: false };
   @ViewChild('f') form: any;
   @ViewChild('swiperWrapper') swiperWrapper: any;
   @ViewChild('controller') editorTag: any;
 
-  semester : String[] = [
-    'Master of first grade, first half',
-    'Master of first grade, second half',
-    'Master of second grade, first half',
-    'Master of second grade, second half',
+  semester: String[] = [
+    'Master_of_first_grade_First_half',
+    'Master_of_first_grade_Second_half',
+    'Master_of_second_grade_First_half',
+    'Master_of_second_grade_Second_half',
   ]
 
-  constructor( private classService : ClassService,
-               private router : Router
-  ) { 
-   }
+  constructor(private classService: ClassService,
+              private router: Router
+  ) {
+  }
 
   ngOnInit(): void {
-    if($('#editormd').length > 0)
+    if ($('#editormd').length > 0)
       this.editor = editormd('editormd', this.editorConfig);
   }
 
 
-  ngAfterViewInit(){
+  ngAfterViewInit() {
     this.swiperWrapper.swiperRef.slideNext();
   }
 
-  onNext(){
+  onNext() {
     this.swiperWrapper.swiperRef.slideNext();
   }
 
-  onPrev(){
+  onPrev() {
     this.swiperWrapper.swiperRef.slidePrev();
   }
 
-  emitIntro(){
+  onSubmit() {
     this.editorTag.updateMarkdown();
-    console.log(this.model);
-  }
-  
-  onSubmit(){
-    console.log(this.model);
-    // if(this.form.valid){
-    //   console.log(this.form.value);
-    //   this.form.reset();
-    //   // this.router.navigate([`/classes`]);
-    // } 
+    this.classService.creatClass(this.model).subscribe(
+      data => {
+        console.log(this.model);
+        this.router.navigate([`/Class-Page/${data.id}`])
+      }
+    );
   }
 }

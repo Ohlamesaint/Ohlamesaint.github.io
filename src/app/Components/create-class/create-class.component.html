@@ -17,13 +17,13 @@
                 <div class="col-md-10 offset-md-1">
                     <div class="form-group mb-3 mt-3">
                         <label>Class Name</label>
-                        <input type="text" class="form-control" name="className" [(ngModel)]='model.className'
-                            #className='ngModel' required [ngClass]="{'is-invalid': className.invalid && (className.touched||className.dirty),
-                          'is-valid': className.valid && (className.touched||className.dirty)}" id="classNameInput">
+                        <!-- #name set 錨點讓之後的存取縮短 原本是 f.control -->
+                        <input type="text" class="form-control" name="name" [(ngModel)]='model.name' #name='ngModel'
+                            required [ngClass]="{'is-invalid': name.invalid && (name.touched||name.dirty),
+                          'is-valid': name.valid && (name.touched||name.dirty)}" id="nameInput">
 
-                        <div class="invalid-feedback"
-                            *ngIf="className.errors && (className.dirty || className.touched)">
-                            <p *ngIf="className.errors.required">First name is required</p>
+                        <div class="invalid-feedback" *ngIf="name.errors && (name.dirty || name.touched)">
+                            <p *ngIf="name.errors.required">First name is required</p>
                         </div>
                     </div>
 
@@ -59,12 +59,12 @@
                     <div class="justify-content-start d-flex mb-3">
                         <button type="button" class="btn btn-secondary" style="text-align: center;"
                             (click)='onPrev();'>edit config <fa-icon [icon]="['fas', 'angle-double-left']"></fa-icon>
-                            </button>
+                        </button>
                     </div>
                 </div>
             </ng-template>
         </swiper>
-        <button type="submit" class="btn btn-primary" (click)="emitIntro()" style="width: 100%;" [disabled]='f.invalid'>Done</button>
+        <button type="submit" class="btn btn-primary" style="width: 100%;" [disabled]='f.invalid'>Done</button>
     </form>
 
 </div>

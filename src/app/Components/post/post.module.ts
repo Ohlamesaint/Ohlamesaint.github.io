@@ -5,7 +5,7 @@ import { PostComponent } from "./post.component";
 @NgModule({
     declarations: [PostComponent],
     imports: [EditormdModule],
-    exports:[PostModule]
+    exports: [PostModule]
 })
 
 export class PostModule {};

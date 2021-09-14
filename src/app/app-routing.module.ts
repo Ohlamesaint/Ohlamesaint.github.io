@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutMeComponent } from './Components/about-me/about-me.component';
+import { ClassListComponent } from './Components/class-list/class-list.component';
+import { ClassPageComponent } from './Components/class-page/class-page.component';
 import { CreateClassComponent } from './Components/create-class/create-class.component';
 import { CreatePostComponent } from './Components/create-post/create-post.component';
 import { EditPostComponent } from './Components/edit-post/edit-post.component';
@@ -14,6 +16,8 @@ const routes: Routes = [
   { path:'View-Post/:id', component: PostComponent},
   { path:'Edit-Post/:id', component: EditPostComponent },
   { path:'Create-Class', component: CreateClassComponent},
+  { path:'Class-Page/:id', component: ClassPageComponent},
+  { path:'Classes', component: ClassListComponent},
   {
     path: '**',
     redirectTo: 'About-Me', pathMatch : "full"

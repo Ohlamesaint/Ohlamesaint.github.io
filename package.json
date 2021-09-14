@@ -23,6 +23,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.3",
     "@fortawesome/free-regular-svg-icons": "^5.15.3",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "editor.md": "^1.5.0",
     "ngx-markdown": "^12.0.1",
     "rxjs": "~6.6.0",
     "swiper": "^7.0.5",
