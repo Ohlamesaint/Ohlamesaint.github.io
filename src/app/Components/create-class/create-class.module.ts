@@ -13,7 +13,7 @@ import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontaweso
 @NgModule({
     declarations: [CreateClassComponent],
     imports: [EditormdModule, SwiperModule, FontAwesomeModule, FormsModule, CommonModule],
-    exports: [CreateClassModule]
+    exports: [CreateClassComponent]
 })
 
 export class CreateClassModule {

@@ -1,12 +1,8 @@
 import { AfterViewInit, Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
-import { FormsModule } from '@angular/forms'
 import { Router } from '@angular/router';
 import { ClassPost } from 'src/app/Classes/class-post';
 import { ClassService } from 'src/app/Services/class.service';
-import { PostService } from 'src/app/Services/post.service';
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y, Swiper } from 'swiper';
-import { EditPostComponent } from '../edit-post/edit-post.component';
-import { EditormdComponent } from '../editormd/editormd.component';
 import { EditorConfig } from '../../Directives/editor/model/editor-config'
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);

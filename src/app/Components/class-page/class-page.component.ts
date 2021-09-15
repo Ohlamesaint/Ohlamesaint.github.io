@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { ClassPost } from 'src/app/Classes/class-post';
 import { ClassService } from 'src/app/Services/class.service';
 
 
@@ -14,6 +15,7 @@ declare var editormd: any;
 export class ClassPageComponent implements OnInit {
 
   public id : any;
+  public model : ClassPost = new ClassPost();
 
   constructor( private route: ActivatedRoute,
                private classService: ClassService) { }
@@ -22,15 +24,15 @@ export class ClassPageComponent implements OnInit {
     this.id = this.route.snapshot.params['id'];
     this.classService.getClassById(this.id).subscribe(
       data => {
-        console.log(data);
-        $('textarea').html = data.markdown;
+        this.model = data;
+        $("textarea").html = data.markdown;
         this.decoration();
       }
     )
   }
 
   decoration(){
-    editormd.markdownToHTML("content2", {
+    editormd.markdownToHTML("content", {
       htmlDecode      : "style,script,iframe",  // you can filter tags decode
       emoji           : true,
       taskList        : true,

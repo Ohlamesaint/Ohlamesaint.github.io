@@ -1,6 +1,12 @@
-<div class="mt-3">
-    <div id="content2" class="contenttext">
-        <textarea style="display:none;" name="editormd-markdown-doc"></textarea>
-    
-      </div>
+<div class="justify-content-center mt-3">
+  <h2 style="text-align: center;"> {{model.name}} </h2>
+  <hr>
+  <p style="color: rgb(155, 154, 154); text-align: center;">
+    <fa-icon [icon]="['fas', 'chalkboard-teacher']"></fa-icon> 授課老師 {{model.teacher}}
+  </p>
+
+  <div id="content" class="contenttext">
+    <textarea style="display:none;" name="editormd-markdown-doc"></textarea>
+
+  </div>
 </div>

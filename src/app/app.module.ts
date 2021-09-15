@@ -13,15 +13,17 @@ import { PostComponent } from './Components/post/post.component';
 import { EditPostModule } from './Components/edit-post/edit-post.module';
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { faCalendarPlus, faIdBadge } from '@fortawesome/free-regular-svg-icons';
-import { faGraduationCap, faSchool, faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import { faGraduationCap, faSchool, faAngleRight, faChalkboardTeacher } from '@fortawesome/free-solid-svg-icons';
 import { SwiperModule } from 'swiper/angular';
 import { CreateClassModule } from './Components/create-class/create-class.module';
-import { ClassPageComponent } from './Components/class-page/class-page.component';
 import { ClassListComponent } from './Components/class-list/class-list.component';
+import { ClassPageComponent } from './Components/class-page/class-page.component';
 
 
 @NgModule({
-  declarations: [AppComponent,  AboutMeComponent, CreatePostComponent, SideBarComponent, PostListComponent, PostComponent, ClassListComponent, ClassPageComponent],
+  declarations: [AppComponent,  AboutMeComponent, CreatePostComponent, SideBarComponent, PostListComponent, PostComponent, 
+    ClassListComponent, ClassPageComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -31,7 +33,6 @@ import { ClassListComponent } from './Components/class-list/class-list.component
     FontAwesomeModule,
     SwiperModule,
     CreateClassModule,
-    
   ],
   providers: [],
   bootstrap: [AppComponent],
@@ -43,7 +44,8 @@ export class AppModule {
     library.addIcons(faIdBadge);
     library.addIcons(faGraduationCap);
     library.addIcons(faSchool);
-    library.addIcons(faAngleRight)
+    library.addIcons(faAngleRight);
+    library.addIcons(faChalkboardTeacher);
   }
 
 }
