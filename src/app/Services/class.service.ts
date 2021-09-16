@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ClassPost } from '../Classes/class-post';
+import { Post } from '../Classes/post';
 
 @Injectable({
   providedIn: 'root'
@@ -24,4 +25,8 @@ export class ClassService {
     return this.httpClient.get<ClassPost[]>(`${this.baseUrl}/${semester}`);
   }
   
+  getPostByClassType(id: Number, classType: String): Observable<Post[]>{
+    return this.httpClient.get<Post[]>(`${this.baseUrl}/getClassPosts/${id}/${classType}`);
+  }
+
 }

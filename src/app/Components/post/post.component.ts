@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Post } from 'src/app/Classes/post';
 import { PostService } from 'src/app/Services/post.service';
-import { EditorConfig } from "../../Directives/editor/model/viewer-config";
 
 declare var $: any;
 declare var editormd: any;
@@ -16,7 +15,6 @@ export class PostComponent implements OnInit {
 
   public post: Post = new Post();
   private id: Number = 0;
-  private conf = new EditorConfig();
 
   constructor( private postService: PostService,
                private route: ActivatedRoute ) { }

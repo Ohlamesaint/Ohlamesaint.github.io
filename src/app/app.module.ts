@@ -12,7 +12,7 @@ import { PostListComponent } from './Components/post-list/post-list.component';
 import { PostComponent } from './Components/post/post.component';
 import { EditPostModule } from './Components/edit-post/edit-post.module';
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
-import { faCalendarPlus, faIdBadge } from '@fortawesome/free-regular-svg-icons';
+import { faCalendarPlus, faIdBadge, faPlusSquare } from '@fortawesome/free-regular-svg-icons';
 import { faGraduationCap, faSchool, faAngleRight, faChalkboardTeacher } from '@fortawesome/free-solid-svg-icons';
 import { SwiperModule } from 'swiper/angular';
 import { CreateClassModule } from './Components/create-class/create-class.module';
@@ -46,6 +46,7 @@ export class AppModule {
     library.addIcons(faSchool);
     library.addIcons(faAngleRight);
     library.addIcons(faChalkboardTeacher);
+    library.addIcons(faPlusSquare)
   }
 
 }

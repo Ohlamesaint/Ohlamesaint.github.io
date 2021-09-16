@@ -5,7 +5,7 @@ export class Post implements PostInterface{
     // Post Id
     id: number = 0;
     // Post 名稱
-    postName: String = "";
+    title: String = "";
     // Post 是否已發佈
     active: Boolean = false;
     // Post 內容類別
@@ -14,10 +14,11 @@ export class Post implements PostInterface{
     
     /////////////////////////////////////////////////
     type: String = "";
+    classType: String = "";
     // 若為隋堂筆記，則課程名稱
-    className: String = "";
+    // className: String = "";  --> 不用
     // 若為系列文章，則系列名稱
-    seriesName: String = "";
+    // seriesName: String = "";  --> 不用
     // 需 trigger disable，不可同時為 class 與 series //
 
     // 文章內容

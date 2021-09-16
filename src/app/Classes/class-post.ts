@@ -7,4 +7,5 @@ export class ClassPost implements PostInterface {
     teacher: String = "";
     semester: String = "";
     markdown: string = "";
+    classType: String = "";
 }
